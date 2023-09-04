@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html LANG="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width-device-whidth; initial-scale=1.0">
+        <title> Números e Estatísticas</title>
+    </head>
+</html>
+   <body>
+     <script>
+        let numero, soma = 0, quantidade = 0, maior = 0, menor = Infinity, pares = 0, ímpares = 0;
+        numero = 1;
+       
+       while (numero !== 0) {
+        numero = parseInt(prompt("digite um número"));
+
+           if(numero !== 0){
+            quantidade++;
+            soma += numero;
+
+              if (numero % 2 === 0){
+                pares++;
+                 } else {
+                impares++;
+             }
+              if(quantidade ===1){
+                maior = numero;
+                menor = numero;
+               } else{
+                if (numero > maior) {
+                      maior = numero;
+                 }
+                   if (numero < menor){
+                    menor = numero;
+                }
+            }
+        }
+     }
+
+  const media = soma / quantidade;
+     const output = `
+      <p>Média: ${media.toFixed(2)}</p>
+      <p>Maoir: ${maior}</p>
+      <p>Menor: ${menor}</p>
+      <p>Pares: ${pares}</p>
+      <p>ìmpares: ${ímpares}</p> 
+     `
+      
+      </script>
+    </body>
